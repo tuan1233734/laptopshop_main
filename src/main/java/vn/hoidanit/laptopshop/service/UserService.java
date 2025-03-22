@@ -27,6 +27,10 @@ public class UserService {
         return this.userRepository.findByEmailAndPhone(email, phone);
     }
 
+    public User getAllById(long id) {
+        return this.userRepository.findById(id);
+    }
+
     public User handleSaveUser(User user) {
         User eric = this.userRepository.save(user);
         System.out.println(eric);
